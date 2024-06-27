@@ -1,0 +1,35 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+body {
+	background-color: #fdfdfd;
+}
+
+.container {
+	max-width: 1000px;
+}
+
+.expense-tracker-header {
+	background: linear-gradient(135deg, #6f42c1 0%, #007bff 100%);
+	color: #fff;
+	border-radius: 8px;
+	margin: 20px auto;
+	max-width: 400px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header-icon {
+	margin-bottom: 5px;
+	color: #fff;
+}
+
+.header-title {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 2.5rem;
+	margin: 0;
+}
