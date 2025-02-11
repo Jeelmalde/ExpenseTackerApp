@@ -107,7 +107,11 @@ const AddTransaction = ({ onAddTransaction, balance }) => {
 										<option key={"type2"} value={"income"}>
 											Income
 										</option>
-										<option key={"type3"} value={"investment"}>
+										<option
+											key={"type3"}
+											value={"investment"}
+											disabled={balance <= 0}
+										>
 											Investment
 										</option>
 									</select>
@@ -133,7 +137,12 @@ const AddTransaction = ({ onAddTransaction, balance }) => {
 										type="number"
 										className="form-control"
 										id="amount"
-										max={formData.mode === "expense" ? balance : Infinity}
+										max={
+											formData.mode === "expense" ||
+											formData.mode === "investment"
+												? balance
+												: Infinity
+										}
 										value={formData.amount}
 										onChange={handleChange}
 										required
